@@ -1,0 +1,185 @@
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .contenedorNav{
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+  }
+
+  .navbar {
+    background-color: #256C70; /* Parte superior con color */
+    overflow: hidden;
+    padding: 10px 5%;
+  }
+
+  .top-bar {
+    background-color: #FAFFFE; /* Parte inferior con blanco */
+    overflow: hidden;
+    margin: 0 10%;
+  }
+
+  .navbar a, .top-bar .logo, .top-bar a {
+    display: inline-block;
+    color: black; /* Color de las letras */
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+
+  .logo {
+    margin: 0;
+    padding: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  }
+  .navbar a:hover, .top-bar a:hover {
+    color: #319191;
+  }
+
+  .social-icons {
+    float: right;
+  }
+
+  .social-icons img {
+    width: 30px; /* Tamaño de los iconos */
+    margin-left: 20px; /* Espacio entre los iconos */
+  }
+
+  .navbar .selected, .top-bar .selected {
+  color: #4C6FBF; /* Color de letra para el elemento seleccionado */
+}
+.titulo {
+    background-color: #256C70;
+    color: #ffffff; /* Letras blancas */
+    border-radius: 20px; /* Ajusta este valor para cambiar el radio de las esquinas */
+    padding: 5px 10px; /* Espacio interno alrededor del texto */
+    width: 55%; /* Ancho del título */
+    text-align: center; /* Alinea el texto al centro */
+    margin: auto; /* Centra el título horizontalmente y deja espacio arriba y abajo */
+    font-family: dm-sans,Arial, sans-serif;
+  }
+
+.titulo h1 {
+	font-size: 400%;
+	margin: 0;
+}
+
+    .contenedor {
+        display: flex;
+        justify-content: space-between;
+        margin: 5% 0;
+ 
+    }
+
+    .etiqueta-contenedor {
+        position: relative;
+	width: 20%;
+        
+    }
+
+    .etiqueta {
+	flex: 1;
+        position: relative;
+        padding: 20px;
+        height: 100%;
+        transition: transform 0.3s;
+        overflow: hidden;
+	background-size: cover;
+	display: flex;
+	flex-direction: column; 
+    	align-items: center; 
+    	justify-content: flex-end;;
+    }
+
+   .etiqueta p {
+    	text-align: center; 
+    	color: white; 
+   	font-family: arial, serif; 
+	padding: 10% 0;
+   }
+
+    .etiqueta p strong {
+	padding: 100% 0;
+    	font-weight: bold;
+	font-family: arial, serif;
+	
+    }
+
+    .etiqueta-contenedor:hover .etiqueta{
+        transform: translateY(-15%);
+    }
+
+    .boton-contenedor {
+	padding: 5px 10px;
+	background-color: #007bff;
+	opacity: 0;
+	transition: opacity 0.3s, transform 0.3s;
+	background-color: #E7ECEC;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 15%;
+    }
+
+   .boton-contenedor button {
+	padding: 5px 10px;
+    	background-color: #30ADA7; 
+	border: none;
+    	border-radius: 5px;
+    	cursor: pointer;
+    	color: white;
+    	font-family: arial, serif; 
+    	font-weight: bold; 
+   }
+    .etiqueta-contenedor:hover .boton-contenedor {
+        opacity: 1;
+	transform: translateY(-100%);
+    }
+
+    .etiqueta p,
+    .boton-contenedor button,
+    .etiqueta-contenedor {
+    	margin: 0;
+    }
+
+.contenedorSecciones {
+  padding-top: 0px; /* Ajusta el valor según la altura de tu barra de navegación */
+}
+
+.pruebas {
+   height: 800px;
+   background-color: #ddd;
+}
+
+section {
+  scroll-margin-top: 150px; /* Ajusta el valor según la altura de tu barra de navegación */
+  height: 100vh;
+}
+
+.inicioSec{
+   scroll-margin-top: 80px; /* Ajusta el valor según la altura de tu barra de navegación */
+  height: 90vh;
+}
+
+iframe {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor padre */
+    height: 100%; /* Ajusta la altura al 100% del contenedor padre */
+    border: none; /* Elimina los bordes del iframe */
+}
+
+.serviciosDiv {
+   /* min-height: calc(100vh - 100px);  Resta el tamaño de la barra de navegación */
+   background-color: #FFF;
+   padding-top: 2%; /* Ajusta según la altura de la barra de navegación */
+}
+
+.ubicacionDiv {
+   /* min-height: calc(100vh - 100px);  Resta el tamaño de la barra de navegación */
+   background-color: #FFF;
+   padding-top: 1%; /* Ajusta según la altura de la barra de navegación */
+   min-height: 150vh;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barra de Navegación</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .navbar {
+    background-color: #256C70; /* Parte superior con color */
+    overflow: hidden;
+    padding: 10px 5%;
+  }
+
+  .top-bar {
+    background-color: #FAFFFE; /* Parte inferior con blanco */
+    overflow: hidden;
+    margin: 0 10%;
+  }
+
+  .navbar a, .top-bar .logo, .top-bar a {
+    display: inline-block;
+    color: black; /* Color de las letras */
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+
+  .logo {
+    margin: 0;
+    padding: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  }
+  .navbar a:hover, .top-bar a:hover {
+    color: #319191;
+  }
+
+  .social-icons {
+    float: right;
+  }
+
+  .social-icons img {
+    width: 30px; /* Tamaño de los iconos */
+    margin-left: 20px; /* Espacio entre los iconos */
+  }
+
+  .navbar .selected, .top-bar .selected {
+  color: #4C6FBF; /* Color de letra para el elemento seleccionado */
+}
+</style>
+</head>
+<body>
+
+<!-- Barra de navegación superior -->
+<div class="navbar">
+  <div class="social-icons">
+    <img src="whatsapp.png" alt="Red Social 3">
+    <img src="facebook.png" alt="Red Social 1">
+    <img src="instagram.png" alt="Red Social 2">
+  </div>
+</div>
+
+<!-- Barra de navegación inferior -->
+<div class="top-bar">
+  <h1 class= "logo" >MEDICAST</h1>
+  <a href="#">Inicio</a>
+  <a href="#">Acerca de nosotros</a>
+  <a href="#">Servicios</a>
+  <a href="#">Instalaciones</a>
+  <a href="#">Ubicación</a>
+  <a href="#">Contáctanos</a>  
+<!-- Aquí puedes agregar elementos de la parte inferior de la barra de navegación si es necesario -->
+</div>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSTALACIONES</title>
+    <style>
+        .contenedor-titulo {
+            width: 30%;
+            height: 70px; /* Ajusta la altura según sea necesario */
+            background-image: url('img/Recursos/imagenTit.jpg'); /* Reemplaza 'imagenTit.jpg' con la ruta de tu imagen */
+            background-size: cover; /* Escala la imagen para que se ajuste al div */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            background-position: center; /* Centra la imagen dentro del div */
+            display: flex;
+            justify-content: center; /* Centra el contenido horizontalmente */
+            align-items: center; /* Centra el contenido verticalmente */
+        }
+        .texto {
+            color: white;
+            font-size: 250%;
+            font-weight: bold;
+            text-align: center;
+            margin: 5% 0;
+            font-family: sans-serif;
+        }
+	
+	.contenedorImg {
+	    flex: 0 0 100%;
+	    width: 100%;
+	    object-fit: cover;
+  	    scroll-snap-align: center;
+	    display: flex;
+	    flex-wrap: nowrap;
+    	    justify-content: center;
+    	    align-items: center;
+            background: radial-gradient(ellipse, rgba(38, 114, 114, 0.7) ,rgba(37, 108, 112, 0.8) , #216673);
+	}
+
+	.carousel {
+    	    display: flex;
+  	    width: 100%;
+  	    height: 70vh;
+  	    overflow-x: scroll;
+            scroll-snap-type: x mandatory; 
+	     padding-top: 2%;
+	}
+
+        .imagen-carrusel {
+	   object-fit: cover;
+	   height : 60vh;
+        }
+        .boton-flecha {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1;
+        }
+        .boton-izquierda {
+            left: 10px;
+        }
+        .boton-derecha {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="contenedor-titulo">
+    <p class="texto">INSTALACIONES</p>
+</div>
+
+<div >
+	<div class="carousel">
+		<div class="contenedorImg">
+    			<img class="imagen-carrusel" src="img/Instalaciones/inst1.jpeg" alt="Imagen 1">
+		</div>
+		<div class="contenedorImg">
+    			<img class="imagen-carrusel" src="img/Instalaciones/inst2.jpeg" alt="Imagen 2">
+		</div>
+		<div class="contenedorImg">
+    			<img class="imagen-carrusel" src="img/Instalaciones/inst3.jpeg" alt="Imagen 3">
+		</div>
+		<div class="contenedorImg">
+    			<img class="imagen-carrusel" src="img/Instalaciones/inst4.jpeg" alt="Imagen 4">
+		</div>
+		<div class="contenedorImg">
+    			<img class="imagen-carrusel" src="img/Instalaciones/inst5.jpeg" alt="Imagen 5">
+		</div>
+		<div class="contenedorImg">
+    			<img class="imagen-carrusel" src="img/Instalaciones/inst6.jpeg" alt="Imagen 1">
+		</div>
+		<div class="contenedorImg">
+    			<img class="imagen-carrusel" src="img/Instalaciones/inst7.jpeg" alt="Imagen 2">
+		</div>
+		<div class="contenedorImg">
+    			<img class="imagen-carrusel" src="img/Instalaciones/inst8.jpeg" alt="Imagen 3">
+		</div>
+		<div class="contenedorImg">
+    			<img class="imagen-carrusel" src="img/Instalaciones/inst9.jpeg" alt="Imagen 4">
+		</div>
+		<div class="contenedorImg">
+    			<img class="imagen-carrusel" src="img/Instalaciones/inst10.jpeg" alt="Imagen 5">
+		</div>
+		<div class="contenedorImg">
+    			<img class="imagen-carrusel" src="img/Instalaciones/inst11.jpeg" alt="Imagen 1">
+		</div>
+		<div class="contenedorImg">
+    			<img class="imagen-carrusel" src="img/Instalaciones/inst12.jpeg" alt="Imagen 2">
+		</div>
+		<div class="contenedorImg">
+    			<img class="imagen-carrusel" src="img/Instalaciones/inst13.jpeg" alt="Imagen 3">
+		</div>
+	</div>
+	<button class="boton-flecha boton-izquierda" onclick="cambiarImagen(-1)">&#10094;</button>
+        <button class="boton-flecha boton-derecha" onclick="cambiarImagen(1)">&#10095;</button>
+</div>
+
+
+<script>
+    let indiceImagenActual = 0;
+    const imagenesCarrusel = document.querySelectorAll('.imagen-carrusel');
+    const anchoCarrusel = document.querySelector('.carousel').offsetWidth;
+
+    function mostrarImagen(n) {
+       const desplazamiento = n * anchoCarrusel;
+       document.querySelector('.carousel').scrollTo({
+           left: desplazamiento,
+           behavior: 'smooth' // Desplazamiento suave
+       });
+       indiceImagenActual = n;
+   }
+
+   function cambiarImagen(n) {
+    const totalImagenes = imagenesCarrusel.length;
+    let nuevoIndice = indiceImagenActual + n;
+
+    // Manejo de límites para el índice de la imagen
+	//console.log("1: "+ n);
+	//console.log("2: "+ nuevoIndice);
+	//console.log("3: "+ indiceImagenActual);
+	
+
+    if (nuevoIndice >= totalImagenes) {
+        nuevoIndice = 0; // Si se excede el límite superior, regresar al inicio
+    } else if (nuevoIndice < 0) {
+        nuevoIndice = totalImagenes - 1; // Si se excede el límite inferior, ir al final
+    }
+
+    mostrarImagen(nuevoIndice);
+}
+
+</script>
+
+</body>
+</html>

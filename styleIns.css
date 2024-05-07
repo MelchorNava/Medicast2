@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.flecha {
+    position: relative;
+    width: 40%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.titulo {
+    position: relative;
+    display: inline-block; /* Para que el rectángulo solo ocupe el espacio del texto */
+    padding: 20px;
+    background-color: #256C70;
+    color: #ffffff;
+}
+
+.titulo h1 {
+    margin: 0;
+}
+
+.punta {
+    position: absolute;
+    top: 0;
+    right: -20px; /* Ajusta según el tamaño del triángulo */
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent; /* Tamaño del triángulo */
+    border-left: 20px solid #256C70; /* Color del triángulo */
+    border-bottom:  solid transparent; /* Tamaño del triángulo */
+}
+
+.carrusel {
+    flex: 1;
+    background-color: #ccc; /* Cambia el color de fondo del carrusel según sea necesario */
+    overflow: hidden;
+}
+#contenedor-superior {
+    position: relative;
+}
+
+#mi-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+}

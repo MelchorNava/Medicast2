@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>INDEX</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div class="contenedorNav">
+<!-- Barra de navegación superior -->
+<div class="navbar">
+  <div class="social-icons">
+    <img src="img\Recursos\whatsapp.png" alt="Red Social 3">
+    <img src="img\Recursos\facebook.png" alt="Red Social 1">
+    <img src="img\Recursos\instagram.png" alt="Red Social 2">
+  </div>
+</div>
+
+<!-- Barra de navegación inferior -->
+<div class="top-bar">
+  <h1 class= "logo" >MEDICAST</h1>
+  <a href="#inicio">Inicio</a>
+  <a href="#acerca">Acerca de nosotros</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#instalaciones">Instalaciones</a>
+  <a href="#ubicacion">Ubicación</a>
+  <a href="#contacto">Contáctanos</a>  
+<!-- Aquí puedes agregar elementos de la parte inferior de la barra de navegación si es necesario -->
+</div>
+</div>
+
+<div class="contenedorSecciones">
+
+<section class="inicioSec" id="inicio">
+   <iframe src="inicio.html" frameborder="0"></iframe>
+</section>
+
+<section id="acerca">
+  <iframe src="acercadenosotros.html" frameborder="0"></iframe>
+</section>
+
+<section class="serviciosDiv" id="servicios">
+   <iframe src="Servicios.html" frameborder="0"></iframe>
+</section>
+
+<section id="instalaciones">
+  <iframe src="Instalaciones.html" frameborder="0"></iframe>
+</section>
+
+<section class ="ubicacionDiv" id="ubicacion">
+  <iframe src="ubicacion.html" frameborder="0"></iframe>
+</section>
+
+<section id="contacto">
+  <iframe src="Contactanos.html" frameborder="0"></iframe>
+</section>
+</div>
+
+<script>
+  // Función para actualizar el elemento de navegación seleccionado
+function updateNavigation() {
+  const scrollPosition = window.scrollY;
+  const sections = document.querySelectorAll('section');
+  const navbarLinks = document.querySelectorAll('.top-bar a');
+
+  let closestSection = sections[0];
+  let closestDistance = Math.abs(scrollPosition - closestSection.offsetTop);
+
+  sections.forEach(section => {
+    const distance = Math.abs(scrollPosition - section.offsetTop);
+    if (distance < closestDistance) {
+      closestDistance = distance;
+      closestSection = section;
+    }
+  });
+
+  const id = closestSection.getAttribute('id');
+  navbarLinks.forEach(link => {
+    if (link.getAttribute('href').slice(1) === id) {
+      link.classList.add('selected');
+    } else {
+      link.classList.remove('selected');
+    }
+  });
+}
+
+window.addEventListener('scroll', updateNavigation);
+window.addEventListener('load', updateNavigation);
+</script>
+
+
+</body>
+</html>

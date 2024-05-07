@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de  nosotros</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+	    background-color: #ECECEC;
+        }
+
+        .contenedor-titulo {
+            width: 40%;
+            height: 70px; /* Ajusta la altura según sea necesario */
+            background-image: url('img/Recursos/ImagenFleG.png'); /* Reemplaza 'imagenTit.jpg' con la ruta de tu imagen */
+            background-size: cover; /* Escala la imagen para que se ajuste al div */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            background-position: center; /* Centra la imagen dentro del div */
+            display: flex;
+            justify-content: center; /* Centra el contenido horizontalmente */
+            align-items: center; /* Centra el contenido verticalmente */
+            background-color: #ECECEC;
+        }
+        .texto {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            margin: 5% 0;
+            font-family: sans-serif;
+	 }
+
+	.container {
+            display: flex;
+            height: 60vh;
+        }
+        .left-column {
+    	    flex: 1;
+    	    background-image: url('img/Recursos/fondoADN.png');
+    	    background-size: contain;
+    	    background-position: center;
+    	    color: black;
+    	    padding: 20px;
+    	    background-repeat: space;
+    	    align-items: center;
+    	    justify-content: center;
+   	    align-content: center;
+    	    background-position-y: center;
+	    font-size: 25px;
+	    font-family: sans-serif;
+	}
+
+        .right-column {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+        }
+        .right-column img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="contenedor-titulo">
+    <p class="texto">Acerca de  nosotros</p>
+</div>
+<div class="container">
+    <div class="left-column">
+        <p>Somos un centro medico dedicado  a preservar y promover  la salud, mejorando la calidad de la vida de nuestros pacientes</p>
+    </div>
+    <div class="right-column">
+        <img src="img\Recursos\imageADN.jpeg" alt="Imagen derecha"> <!-- Cambia 'tu_imagen.jpg' por la ruta de tu imagen -->
+    </div>
+</div>
+
+</body>
+</html>
