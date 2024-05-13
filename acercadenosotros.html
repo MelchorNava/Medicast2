@@ -6,6 +6,7 @@
     <title>Acerca de  nosotros</title>
     <style>
         body, html {
+            margin-left: 30px;
             margin: 0;
             padding: 0;
             height: 100%;
@@ -14,6 +15,7 @@
         }
 
         .contenedor-titulo {
+            margin-left: 20px;
             width: 40%;
             height: 70px; /* Ajusta la altura según sea necesario */
             background-image: url('img/Recursos/ImagenFleG.png'); /* Reemplaza 'imagenTit.jpg' con la ruta de tu imagen */
@@ -39,6 +41,7 @@
             height: 60vh;
         }
         .left-column {
+            margin-left: 20px;
     	    flex: 1;
     	    background-image: url('img/Recursos/fondoADN.png');
     	    background-size: contain;
@@ -57,11 +60,15 @@
         .right-column {
             flex: 1;
             text-align: center;
-            padding: 20px;
+            padding: 30px;
+            overflow: hidden;
+            
         }
         .right-column img {
-            max-width: 100%;
-            height: auto;
+            max-width: 150;
+            height: 100%;
+            width: 60%;
+            overflow: hidden;
         }
     </style>
 </head>

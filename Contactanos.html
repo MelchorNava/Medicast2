@@ -22,21 +22,25 @@
     <div class="formulario">
       <center><h2>CONCERTAR CITA</h2></center>
       <form action="enviar_a_whatsapp.php" method="POST">
+       
         <div class="form-group">
-          <input type="text" name="nombre" class="left-column" placeholder="Ingrese su Nombre" required>
-          <input type="email" name="email" class="left-column" placeholder="Ingrese su correo" required>
-          <input type="text" name="telefono" class="left-column" placeholder="Ingrese su whatsapp" required>
-          <input type="text" name="asunto" class="right-column" placeholder=" Selecciona el Servicio" required>
-          <textarea name="mensaje" class="right-column" placeholder="¿Cómo te podemos ayudar?" required></textarea>
+          <input type="text" name="nombre"  placeholder="Ingrese su Nombre" required>
+          <input type="email" name="email"  placeholder="Ingrese su correo" required>
+          
+          <input type="text" name="telefono"  placeholder="Ingrese su whatsapp" required>
+          
+          <input type="text" name="asunto" class="right-align"  placeholder=" Selecciona el Servicio" required>
+          <textarea name="mensaje"class="mensaje-derecha"  placeholder="¿Cómo te podemos ayudar?" required></textarea>
+          
         </div>
-
+        <center>
         <div class="form-group">
-          <input type="submit" value="Enviar">
+          <input type="submit" value="AGENDAR CITA" class="centrado">
         </div>
+      </center>
       </form>
     </div>
   </div>
-  
 
 
 </body>
